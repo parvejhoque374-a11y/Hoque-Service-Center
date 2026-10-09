@@ -1,179 +1,498 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hoque Service Centre | Home Appliance Repair</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,sans-serif;color:#172033;line-height:1.6}
-    a{text-decoration:none}
-    header{background:#0b1730;color:white;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .brand{font-weight:bold;font-size:20px;color:white}
-    .btn{display:inline-block;padding:12px 18px;border-radius:10px;background:#1788e8;color:white;font-weight:bold}
-    .hero{background:linear-gradient(135deg,#071126,#164d7c);color:white;padding:65px 6%}
-    .hero h1{font-size:clamp(36px,6vw,58px);line-height:1.1;margin:15px 0}
-    .hero p{color:#d4e2f2;font-size:17px;max-width:600px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-    section{padding:55px 6%}
-    h2{color:#0b1730;font-size:32px}
-    .intro{text-align:center;max-width:700px;margin:auto}
-    .services{background:#f2f7fc}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-    .card{background:white;padding:23px;border:1px solid #e3ebf4;border-radius:16px}
-    .icon{font-size:35px}
-    .card h3{color:#0b1730}
-    .card p,.muted{color:#637087}
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
-    .panel{background:#eaf7ff;padding:25px;border-radius:18px}
-    .partner{background:linear-gradient(135deg,#071126,#103c63);color:white}
-    .partner-box{max-width:950px;margin:auto;padding:30px;border:1px solid #ffffff35;border-radius:20px}
-    .partner h2{color:white}
-    .partner p{color:#d4e2f2}
-    .tag{display:inline-block;padding:6px 12px;background:#d7f8ff;color:#06436b;border-radius:20px;font-size:12px;font-weight:bold}
-    .reviews{background:#f2f7fc}
-    .review{background:white;padding:22px;border-radius:15px;border:1px solid #e3ebf4}
-    .stars{color:#f4a900}
-    .booking{background:#0b1730;color:white}
-    .booking h2{color:white}
-    .formbox{max-width:800px;margin:auto;background:white;color:#172033;padding:25px;border-radius:18px}
-    form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-    label{display:block;font-weight:bold;font-size:14px;margin-bottom:5px}
-    input,select,textarea{width:100%;padding:12px;border:1px solid #d9e2ed;border-radius:9px;font:inherit}
-    textarea{min-height:90px}
-    .full{grid-column:1/-1}
-    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .contact-card{text-align:center;border:1px solid #e3ebf4;border-radius:16px;padding:22px}
-    footer{background:#071126;color:#b8c6da;text-align:center;padding:25px}
-    .wa{position:fixed;right:15px;bottom:15px;background:#19b85a;color:white;padding:13px 17px;border-radius:40px;font-weight:bold;z-index:5}
-    @media(max-width:700px){.grid,.about,.contact-grid{grid-template-columns:1fr}.hero{padding:45px 5%}section{padding:45px 5%}form{grid-template-columns:1fr}.full{grid-column:auto}.brand{font-size:16px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hoque Service Centre | Lalgola</title>
+
+<meta name="description" content="Hoque Service Centre provides home appliance repair, installation and maintenance services in Lalgola, Murshidabad.">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #f5f8fc;
+  line-height: 1.7;
+}
+
+header {
+  background: #ffffff;
+  padding: 15px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 12px #00000010;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand h1 {
+  color: #0754a4;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.brand p {
+  font-size: 13px;
+  color: #666;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #12345a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hero {
+  padding: 75px 6%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #063b79, #0878c9);
+}
+
+.hero h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-white {
+  background: white;
+  color: #0754a4;
+}
+
+.btn-green {
+  background: #168b50;
+  color: white;
+}
+
+.btn-blue {
+  background: #0754a4;
+  color: white;
+}
+
+section {
+  padding: 55px 6%;
+  scroll-margin-top: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  color: #0754a4;
+  margin-bottom: 12px;
+}
+
+.section-description {
+  max-width: 750px;
+  margin: 0 auto 30px;
+  text-align: center;
+  color: #5b6575;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 5px 20px #10274610;
+  border: 1px solid #e8edf5;
+}
+
+.card h3 {
+  color: #0754a4;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.native {
+  background: #eaf4ff;
+}
+
+.highlight {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 32px 22px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 20px #10274610;
+}
+
+.badge {
+  display: inline-block;
+  background: #d9f7e5;
+  color: #116b3a;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.review-box {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 5px 20px #10274610;
+}
+
+.availability {
+  background: #eaf5ff;
+}
+
+.contact {
+  background: #102b49;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  color: white;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #071c32;
+  color: white;
+  font-size: 13px;
+}
+
+.small {
+  font-size: 13px;
+  color: #687386;
+  margin-top: 14px;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 55px 5%;
+  }
+
+  section {
+    padding: 42px 5%;
+  }
+}
+</style>
 </head>
+
 <body>
+
 <header>
-  <a class="brand" href="#home">🔧 HOQUE SERVICE CENTRE</a>
-  <a class="btn" href="tel:+918343076233">📞 Call Now</a>
+  <div class="brand">
+    <img src="logo.png" alt="Hoque Service Centre Logo"
+         onerror="this.style.display='none'">
+
+    <div>
+      <h1>Hoque Service Centre</h1>
+      <p>Home Appliance Repair &amp; Service</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#native-ro">Native RO</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
+
 <section class="hero" id="home">
-  <p>HOME APPLIANCE REPAIR & INSTALLATION</p>
-  <h1>Your Home's<br>Trusted Repair Experts</h1>
-  <p>Home appliance service enquiries in Lalgola, Murshidabad. Contact us to check service availability, visit time and charges.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#booking">📅 Book a Service</a>
-    <a class="btn" style="background:#19b85a" href="https://wa.me/918343076233" target="_blank" rel="noopener">WhatsApp Us</a>
+  <h2>Home Appliance Repair &amp; Service</h2>
+
+  <p>
+    AC, Refrigerator, Washing Machine, RO Water Purifier,
+    Chimney, Geyser and other home appliance installation
+    and repair enquiries in Lalgola and nearby areas.
+  </p>
+
+  <div class="buttons">
+    <a class="btn btn-white" href="tel:+918343076233">
+      📞 Call Now
+    </a>
+
+    <a class="btn btn-green"
+       href="https://wa.me/918343076233?text=Hello%20Hoque%20Service%20Centre%2C%20I%20want%20to%20enquire%20about%20a%20service."
+       target="_blank" rel="noopener">
+      💬 WhatsApp Booking
+    </a>
   </div>
+
+  <p style="margin-top:20px">
+    📍 Lalgola, Murshidabad, West Bengal – 742148
+  </p>
 </section>
 
-<section class="services" id="services">
-  <div class="intro">
-    <p>WHAT WE HELP WITH</p>
-    <h2>Our Services</h2>
-    <p class="muted">Choose an appliance and contact us to ask about availability and pricing.</p>
-  </div>
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+
+  <p class="section-description">
+    Contact us for service enquiries, installation,
+    maintenance and repair. Availability and charges
+    will be confirmed before booking.
+  </p>
+
   <div class="grid">
-    <div class="card"><div class="icon">❄️</div><h3>AC Service</h3><p>AC repair, cleaning, maintenance and installation enquiries.</p><a class="btn" href="#booking" data-service="AC Service">Enquire Now</a></div>
-    <div class="card"><div class="icon">🧊</div><h3>Refrigerator Repair</h3><p>Discuss cooling problems and other fridge issues.</p><a class="btn" href="#booking" data-service="Refrigerator Repair">Enquire Now</a></div>
-    <div class="card"><div class="icon">💧</div><h3>RO / Water Purifier</h3><p>Water purifier servicing, filter and water-flow enquiries.</p><a class="btn" href="#booking" data-service="RO / Water Purifier">Enquire Now</a></div>
-    <div class="card"><div class="icon">🌀</div><h3>Washing Machine</h3><p>Washing machine repair and maintenance enquiries.</p><a class="btn" href="#booking" data-service="Washing Machine">Enquire Now</a></div>
-    <div class="card"><div class="icon">🍳</div><h3>Kitchen Chimney</h3><p>Chimney cleaning, servicing and repair enquiries.</p><a class="btn" href="#booking" data-service="Kitchen Chimney">Enquire Now</a></div>
-    <div class="card"><div class="icon">🔥</div><h3>Geyser & Cooler</h3><p>Ask about geyser and air-cooler service availability.</p><a class="btn" href="#booking" data-service="Geyser / Air Cooler">Enquire Now</a></div>
+
+    <article class="card">
+      <div class="icon">❄️</div>
+      <h3>AC Service</h3>
+      <p>AC installation, servicing and repair enquiries.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🧊</div>
+      <h3>Refrigerator</h3>
+      <p>Fridge troubleshooting, maintenance and repair enquiries.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">💧</div>
+      <h3>RO Water Purifier</h3>
+      <p>Water purifier service, filter replacement and installation enquiries.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🌀</div>
+      <h3>Washing Machine</h3>
+      <p>Washing machine repair and maintenance enquiries.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🍳</div>
+      <h3>Kitchen Chimney</h3>
+      <p>Chimney cleaning, servicing and installation enquiries.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">♨️</div>
+      <h3>Geyser &amp; Cooler</h3>
+      <p>Geyser and air cooler service enquiries.</p>
+    </article>
+
   </div>
 </section>
 
-<section class="partner" id="native">
-  <div class="partner-box">
-    <span class="tag">WATER PURIFIER SERVICE</span>
-    <h2>💧 Native Water Purifier Service</h2>
-    <p>Contact Hoque Service Centre for Native water purifier servicing and filter-related enquiries. Please confirm current service availability and any applicable partner authorization before booking.</p>
-    <a class="btn" href="https://wa.me/918343076233?text=Hello%20Hoque%20Service%20Centre%2C%20I%20have%20a%20Native%20water%20purifier%20service%20enquiry" target="_blank" rel="noopener">Ask on WhatsApp</a>
-  </div>
-</section>
+<section class="native" id="native-ro">
+  <div class="highlight">
 
-<section id="about">
-  <div class="about">
-    <div>
-      <p>ABOUT OUR SERVICE</p>
-      <h2>Helpful Service, Clear Communication</h2>
-      <p class="muted">Hoque Service Centre helps customers enquire about home appliance repair, maintenance and installation in Lalgola, Murshidabad.</p>
-      <a class="btn" href="tel:+918343076233">Call 8343076233</a>
+    <span class="badge">Native RO Water Filter</span>
+
+    <h2 class="section-title">
+      Urban Company – Native RO Water Filter
+    </h2>
+
+    <h3>Native RO Water Purifier Installation &amp; Service</h3>
+
+    <p style="margin-top:15px">
+      Need help with Native RO Water Purifier installation,
+      maintenance or service? Contact Hoque Service Centre
+      to enquire about availability, charges and appointments.
+    </p>
+
+    <p class="small">
+      Partner eligibility and official service availability
+      must be confirmed separately. This page does not itself
+      establish an official partnership.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-green"
+         href="https://wa.me/918343076233?text=Hello%2C%20I%20want%20to%20enquire%20about%20Native%20RO%20Water%20Purifier%20installation%20or%20service."
+         target="_blank" rel="noopener">
+        Enquire on WhatsApp
+      </a>
+
+      <a class="btn btn-blue" href="tel:+918343076233">
+        Call 8343076233
+      </a>
     </div>
-    <div class="panel">
-      <h2>Why Choose Us?</h2>
-      <p>✓ Direct phone and WhatsApp contact</p>
-      <p>✓ Multiple home-appliance service categories</p>
-      <p>✓ Mobile-friendly booking enquiry</p>
-      <p>✓ Local service enquiries around Lalgola</p>
-      <p>✓ Discuss charges before work begins</p>
+
+  </div>
+</section>
+
+<section id="reviews">
+  <h2 class="section-title">Customer Reviews ⭐</h2>
+
+  <p class="section-description">
+    Your feedback helps us improve our service.
+    View available reviews on Google or share your
+    own experience with us.
+  </p>
+
+  <div class="review-box">
+
+    <div style="font-size:40px">⭐</div>
+
+    <h3>We Value Your Feedback</h3>
+
+    <p style="margin:12px 0 20px">
+      Read customer feedback on Google. If you have
+      used our service, you can also send us your
+      feedback through WhatsApp.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-blue"
+         href="https://www.google.com/search?q=Hoque+Service+Centre+Lalgola+Murshidabad"
+         target="_blank" rel="noopener">
+        ⭐ View Google Reviews
+      </a>
+
+      <a class="btn btn-green"
+         href="https://wa.me/918343076233?text=Hello%20Hoque%20Service%20Centre%2C%20I%20want%20to%20share%20my%20service%20feedback."
+         target="_blank" rel="noopener">
+        ✍️ Send Feedback
+      </a>
     </div>
+
+    <p class="small">
+      Only genuine customer reviews should be published.
+    </p>
+
   </div>
 </section>
 
-<section class="reviews" id="reviews">
-  <div class="intro">
-    <p>CUSTOMER FEEDBACK</p>
-    <h2>Customer Reviews</h2>
-    <p class="muted">Replace these sample cards with genuine customer reviews before publishing.</p>
-  </div>
-  <div class="grid">
-    <div class="review"><div class="stars">★★★★★</div><h3>Helpful Communication</h3><p class="muted">Sample review placeholder. Add a real customer's feedback here.</p></div>
-    <div class="review"><div class="stars">★★★★★</div><h3>Easy to Contact</h3><p class="muted">Sample review placeholder. Add a real customer's feedback here.</p></div>
-    <div class="review"><div class="stars">★★★★★</div><h3>Local Service Enquiry</h3><p class="muted">Sample review placeholder. Add a real customer's feedback here.</p></div>
+<section class="availability" id="availability">
+  <div class="highlight">
+
+    <div style="font-size:42px">🕒</div>
+
+    <h2 class="section-title">24×7 WhatsApp Enquiry</h2>
+
+    <p>
+      You can send a booking enquiry through WhatsApp
+      at any time, 24 hours a day, 7 days a week.
+      Actual service timing and availability will
+      be confirmed separately.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-green"
+         href="https://wa.me/918343076233?text=Hello%20Hoque%20Service%20Centre%2C%20I%20want%20to%20book%20a%20home%20appliance%20service."
+         target="_blank" rel="noopener">
+        💬 Send WhatsApp Enquiry
+      </a>
+    </div>
+
   </div>
 </section>
 
-<section class="booking" id="booking">
-  <div class="intro">
-    <p>QUICK BOOKING ENQUIRY</p>
-    <h2>Book a Service</h2>
-    <p>Fill in your details to open WhatsApp with your enquiry.</p>
-  </div>
-  <div class="formbox">
-    <form id="bookingForm">
-      <div><label for="customer">Your Name *</label><input id="customer" required placeholder="Enter your name"></div>
-      <div><label for="phone">Your Mobile Number *</label><input id="phone" required inputmode="tel" placeholder="Enter mobile number"></div>
-      <div><label for="service">Select Service *</label><select id="service" required><option value="">Choose an appliance</option><option>AC Service</option><option>Refrigerator Repair</option><option>RO / Water Purifier</option><option>Washing Machine</option><option>Kitchen Chimney</option><option>Geyser / Air Cooler</option><option>Native Water Purifier</option><option>Other</option></select></div>
-      <div><label for="date">Preferred Date</label><input id="date" type="date"></div>
-      <div class="full"><label for="address">Your Address / Area *</label><input id="address" required placeholder="Village, area, landmark"></div>
-      <div class="full"><label for="problem">Problem Details</label><textarea id="problem" placeholder="Tell us the problem briefly"></textarea></div>
-      <div class="full"><button class="btn" type="submit">Send Booking on WhatsApp →</button><p class="muted">This form sends an enquiry; it does not automatically confirm an appointment.</p></div>
-    </form>
+<section id="contact" class="contact">
+  <h2 class="section-title">Contact Us</h2>
+
+  <p>Hoque Service Centre</p>
+  <p>📍 Lalgola, Murshidabad, West Bengal – 742148</p>
+  <p>📞 8343076233</p>
+
+  <div class="buttons">
+    <a class="btn btn-white" href="tel:+918343076233">
+      Call Us
+    </a>
+
+    <a class="btn btn-green"
+       href="https://wa.me/918343076233"
+       target="_blank" rel="noopener">
+      WhatsApp Us
+    </a>
   </div>
 </section>
 
-<section id="contact">
-  <div class="intro"><p>GET IN TOUCH</p><h2>Contact Hoque Service Centre</h2><p class="muted">Lalgola, Murshidabad, West Bengal</p></div>
-  <div class="contact-grid">
-    <div class="contact-card"><div class="icon">📞</div><h3>Call Us</h3><p>8343076233</p><a class="btn" href="tel:+918343076233">Call Now</a></div>
-    <div class="contact-card"><div class="icon">🟢</div><h3>WhatsApp</h3><p>Send your service enquiry.</p><a class="btn" href="https://wa.me/918343076233" target="_blank" rel="noopener">Message Us</a></div>
-    <div class="contact-card"><div class="icon">📍</div><h3>Service Area</h3><p>Lalgola, Murshidabad</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Lalgola%2C%20Murshidabad%2C%20West%20Bengal" target="_blank" rel="noopener">Google Maps</a></div>
-  </div>
-</section>
 </main>
 
-<footer>© <span id="year"></span> Hoque Service Centre · Lalgola, Murshidabad · 8343076233</footer>
-<a class="wa" href="https://wa.me/918343076233?text=Hello%20Hoque%20Service%20Centre%2C%20I%20need%20appliance%20service" target="_blank" rel="noopener">🟢 WhatsApp</a>
+<footer>
+  <p>© <span id="year"></span> Hoque Service Centre. All rights reserved.</p>
+  <p>Lalgola, Murshidabad, West Bengal</p>
+</footer>
 
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-document.querySelectorAll('[data-service]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('service').value=link.dataset.service;}));
-document.getElementById('bookingForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  const get=id=>document.getElementById(id).value.trim();
-  const message=[
-    'Hello Hoque Service Centre, I want to book a service.',
-    '',
-    'Name: '+get('customer'),
-    'Mobile: '+get('phone'),
-    'Service: '+get('service'),
-    'Preferred date: '+(get('date')||'Not specified'),
-    'Address/Area: '+get('address'),
-    'Problem: '+(get('problem')||'Not specified')
-  ].join('\n');
-  window.open('https://wa.me/918343076233?text='+encodeURIComponent(message),'_blank');
-});
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
+
 </body>
 </html>
