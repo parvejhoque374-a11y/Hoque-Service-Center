@@ -493,6 +493,83 @@ footer {
 document.getElementById("year").textContent =
   new Date().getFullYear();
 </script>
+<!-- HOQUE SERVICE CENTRE BOOKING -->
+<section id="new-booking" style="padding:25px 15px;background:#f1f7ff;">
+  <div style="max-width:600px;margin:auto;background:white;padding:22px;border-radius:14px;box-shadow:0 2px 12px #ccc;">
+    <h2 style="text-align:center;color:#123b70;">Book a Service</h2>
+    <p style="text-align:center;">Hoque Service Centre · Lalgola, Murshidabad</p>
 
+    <form id="hoqueBooking">
+      <label>Your Name</label>
+      <input name="customer" required placeholder="Enter your name"
+        style="width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;">
+
+      <label>Mobile Number</label>
+      <input name="phone" type="tel" required pattern="[0-9]{10}"
+        placeholder="10-digit mobile number"
+        style="width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;">
+
+      <label>Select Service</label>
+      <select name="service" required
+        style="width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;">
+        <option value="">Choose a service</option>
+        <option>AC Repair & Installation</option>
+        <option>Refrigerator Repair</option>
+        <option>Washing Machine Repair</option>
+        <option>RO Water Purifier Repair</option>
+        <option>Native RO Water Filter</option>
+        <option>Chimney Service</option>
+        <option>Geyser Repair</option>
+        <option>Cooler Repair</option>
+        <option>Treadmill Repair</option>
+      </select>
+
+      <label>Preferred Date</label>
+      <input name="date" type="date" required
+        style="width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;">
+
+      <label>Preferred Time</label>
+      <select name="time" required
+        style="width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;">
+        <option value="">Select time</option>
+        <option>Morning (9 AM - 12 PM)</option>
+        <option>Afternoon (12 PM - 4 PM)</option>
+        <option>Evening (4 PM - 8 PM)</option>
+      </select>
+
+      <label>Full Address</label>
+      <textarea name="address" required placeholder="Enter your address"
+        style="width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;"></textarea>
+
+      <label>Problem Details</label>
+      <textarea name="problem" placeholder="Describe the problem"
+        style="width:100%;padding:12px;margin:8px 0 15px;box-sizing:border-box;"></textarea>
+
+      <button type="submit"
+        style="width:100%;padding:14px;background:#16834a;color:white;border:0;border-radius:8px;font-size:17px;font-weight:bold;">
+        Book on WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById("hoqueBooking").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const f = new FormData(this);
+  const message =
+    "NEW SERVICE BOOKING - HOQUE SERVICE CENTRE%0A%0A" +
+    "Name: " + encodeURIComponent(f.get("customer")) + "%0A" +
+    "Mobile: " + encodeURIComponent(f.get("phone")) + "%0A" +
+    "Service: " + encodeURIComponent(f.get("service")) + "%0A" +
+    "Date: " + encodeURIComponent(f.get("date")) + "%0A" +
+    "Preferred Time: " + encodeURIComponent(f.get("time")) + "%0A" +
+    "Address: " + encodeURIComponent(f.get("address")) + "%0A" +
+    "Problem: " + encodeURIComponent(f.get("problem") || "Not specified");
+
+  window.open("https://wa.me/918343076233?text=" + message, "_blank");
+});
+</script>
 </body>
 </html>
